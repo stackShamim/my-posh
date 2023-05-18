@@ -38,7 +38,7 @@ blocks:
             [[ $status == *"M"* ]] && bits+='!'
             [[ "$(git rev-list --count "@{u}..")" -gt 0 ]] && bits+='*'
             [[ -n $bits ]] && STAT="  $bits"
-            echo -n " $BRANCH$STAT"
+            echo -n " $STAT"
           shell: bash
         style: powerline
         template: " {{ .Output }} "
