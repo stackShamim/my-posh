@@ -67,9 +67,9 @@ blocks:
     properties:
       branch_ahead_icon: ' '
       branch_behind_icon: ' '
-      branch_gone_icon: ''
+      branch_gone_icon: ' '
       branch_icon: ' '
-      branch_identical_icon:  ''
+      branch_identical_icon:  ' '
       fetch_status: true
     style: diamond
     template: "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}"
