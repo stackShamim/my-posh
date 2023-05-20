@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 blocks:
   - alignment: left
+    newline: true
     segments:
       # Session
       - background: p:black
