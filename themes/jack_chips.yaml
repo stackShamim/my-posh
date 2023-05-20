@@ -109,6 +109,84 @@ blocks:
 - alignment: right
   segments:
 
+  # ENVIRONMENT
+
+  # GIT
+  # - background_templates:
+  #   - "p:c-project-flutter"
+  #   foreground: p:c-badge-text
+  #   leading_diamond: ''
+  #   style: diamond
+  #   template: " {{ .MajorMinorPatch }}"
+  #   trailing_diamond: ' ' 
+  #   type: gitversion
+
+  # Cmake
+  - background_templates:
+    - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-flutter{{ end }}"
+    foreground: p:c-badge-text
+    leading_diamond: ''
+    style: diamond
+    template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_FLUTTER)) }} 󰙲 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
+    trailing_diamond: ' ' 
+    type: cmake
+
+
+  # DART
+  - background_templates:
+    - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-flutter{{ end }}"
+    foreground: p:c-badge-text
+    leading_diamond: ''
+    style: diamond
+    template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_FLUTTER)) }} {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
+    trailing_diamond: ' ' 
+    type: dart
+
+
+  # LUA
+  - background_templates: 
+    - "{{ if .Error }}p:c-project-generic-error{{ else }}p:c-project-lua{{ end }}"
+    foreground: p:c-badge-text
+    leading_diamond: ''
+    style: diamond
+    template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_LUA)) }} {{ if or (.Error) (empty .Full) }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
+    trailing_diamond: ' ' 
+    type: lua
+  
+  # NODE
+  - background_templates:
+    - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-node{{ end }}"
+    foreground: p:c-badge-text
+    leading_diamond: ''
+    style: diamond
+    template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_NODE)) }}󰎙 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
+    trailing_diamond: ' ' 
+    type: node
+
+  # RUST
+  - background_templates:
+    - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-rust{{ end }}"
+    foreground: p:c-badge-text
+    leading_diamond: ''
+    style: diamond
+    template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_RUST)) }} {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
+    trailing_diamond: ' ' 
+    type: rust
+
+  # PYTHON
+  - background_templates:
+    - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-python{{ end }}"
+    foreground: p:c-badge-text
+    leading_diamond: ''
+    properties:
+      display_mode: context
+    style: diamond
+    template: "{{ if or (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON))) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }} {{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON)) }}{{ .Full }}{{ end }}{{ if and (.Venv) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON))) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }} \ue621 {{ end }}{{ if and (.Venv) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }}{{ if .Env.SEGMENT_PROJECT_PYTHON_ACTIVE_VENV_STR }}{{ .Env.SEGMENT_PROJECT_PYTHON_ACTIVE_VENV_STR }}{{ else }}{{ .Venv }}{{ end }}{{ end }}{{ end }}"
+    trailing_diamond: ' ' 
+    type: python
+
+
+
   # EXECUTION TIME
   - background_templates:
     # change the background according to the execution time
@@ -142,6 +220,8 @@ blocks:
     template: "󱑁 {{ .CurrentDate | date .Format }}"
     trailing_diamond: '' 
     type: time
+
+
 
   # BATTERY
   - background_templates:
@@ -180,59 +260,6 @@ blocks:
   #   trailing_diamond: ' ' 
   #   type: text
 
-  # ENVIRONMENT
-  # - background_templates:
-  #   - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-crystal{{ end }}"
-  #   foreground: p:c-badge-text
-  #   leading_diamond: ''
-  #   style: diamond
-  #   template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_CRYSTAL)) }}\ue62f {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-  #   trailing_diamond: ' ' 
-  #   type: crystal
-  # - background_templates:
-  #   - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-flutter{{ end }}"
-  #   foreground: p:c-badge-text
-  #   leading_diamond: ''
-  #   style: diamond
-  #   template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_FLUTTER)) }} | {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-  #   trailing_diamond: ' ' 
-  #   type: dart
-  # - background_templates: 
-  #   - "{{ if .Error }}p:c-project-generic-error{{ else }}p:c-project-lua{{ end }}"
-  #   foreground: p:c-badge-text
-  #   leading_diamond: ''
-  #   style: diamond
-  #   template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_LUA)) }}\ue620 {{ if or (.Error) (empty .Full) }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-  #   trailing_diamond: ' ' 
-  #   type: lua
-  # - background_templates:
-  #   - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-node{{ end }}"
-  #   foreground: p:c-badge-text
-  #   leading_diamond: ''
-  #   style: diamond
-  #   template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_NODE)) }}\ue718 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-  #   trailing_diamond: ' ' 
-  #   type: node
-  # - background_templates:
-  #   - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-rust{{ end }}"
-  #   foreground: p:c-badge-text
-  #   leading_diamond: ''
-  #   style: diamond
-  #   template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_RUST)) }}\ue7a8 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-  #   trailing_diamond: ' ' 
-  #   type: rust
-  # - background_templates:
-  #   - "{{ if empty .Full }}p:c-project-generic-error{{ else }}p:c-project-python{{ end }}"
-  #   foreground: p:c-badge-text
-  #   leading_diamond: ''
-  #   properties:
-  #     display_mode: context
-  #   style: diamond
-  #   template: "{{ if or (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON))) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }}\ue235 {{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON)) }}{{ .Full }}{{ end }}{{ if and (.Venv) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON))) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }} \ue621 {{ end }}{{ if and (.Venv) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }}{{ if .Env.SEGMENT_PROJECT_PYTHON_ACTIVE_VENV_STR }}{{ .Env.SEGMENT_PROJECT_PYTHON_ACTIVE_VENV_STR }}{{ else }}{{ .Venv }}{{ end }}{{ end }}{{ end }}"
-  #   trailing_diamond: ' ' 
-  #   type: python
-
-    
   # last prompt 
   - foreground_templates:
     - "{{ if eq \"False\" (title (default \"False\" .Env.ENABLE_ARROW_DIVIDER_COLOR_EXECUTION_RETURN)) }}p:c-badge-white{{ else }}{{ if eq .Code 0 }}p:c-badge-return-success{{ else if or (eq .Code 1) (eq .Code 130) }}p:c-badge-return-fail-term{{ else }}p:c-badge-return-custom{{ end }}{{ end }}"
