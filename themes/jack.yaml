@@ -298,7 +298,7 @@ palette:
   c-terminal-error: "#FFAB40"
   c-terminal-right: "#CDCFFF"
 # secondary_prompt:
-#   background: transparent
+#   background: transparent # test
 #   foreground: p:c-secondary-ellipsis
 #   template:  ... 
 # transient_prompt:
