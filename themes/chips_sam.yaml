@@ -223,22 +223,6 @@ blocks:
 
 
 
-  # BATTERY
-  - background_templates:
-    - "{{ if .Error }}p:c-battery-state-error{{ end }}"
-    - "{{ if le .Percentage 15 }}p:c-battery-15-less{{ end }}"
-    - "{{ if and (ge .Percentage 16) (le .Percentage 30) }}p:c-battery-30-less{{ end }}"
-    - "{{ if and (ge .Percentage 31) (le .Percentage 45) }}p:c-battery-45-less{{ end }}"
-    - "{{ if and (ge .Percentage 46) (le .Percentage 55) }}p:c-battery-55-less{{ end }}"
-    - "{{ if and (ge .Percentage 56) (le .Percentage 70) }}p:c-battery-70-less{{ end }}"
-    - "{{ if and (ge .Percentage 71) (le .Percentage 90) }}p:c-battery-90-less{{ end }}"
-    - "{{ if and (ge .Percentage 91) (le .Percentage 100) }}p:c-battery-100-less{{ end }}"
-    foreground: p:c-badge-text
-    leading_diamond: ''
-    style: diamond
-    template: "{{ if eq \"True\" (title (default \"False\" .Env.DISABLE_SEGMENT_BATTERY)) }}{{ else }}{{ if not .Error }}{{ if eq \"Charging\" .State.String }}\ue315 {{ else if eq \"Discharging\" .State.String }}\uf062 {{ else if eq \"Full\" .State.String }}~ {{ else }}? {{ end }}{{ if le .Percentage 15 }}\uf579{{ else if and (ge .Percentage 16) (le .Percentage 30) }}\uf57a{{ else if and (ge .Percentage 31) (le .Percentage 45) }}\uf57c{{ else if and (ge .Percentage 46) (le .Percentage 55)}}\uf57d{{ else if and (ge .Percentage 56) (le .Percentage 70) }}\uf57e{{ else if and (ge .Percentage 71) (le .Percentage 80) }}\uf580{{ else if and (ge .Percentage 81) (le .Percentage 95) }}\uf581{{ else }}\uf578{{ end }} {{ .Percentage }}%{{ else }}!{{ end }}{{ end }}"
-    trailing_diamond: ''
-    type: battery
 
   type: prompt
 
