@@ -51,7 +51,7 @@ blocks:
       style: folder
     style: diamond
     template: 󰉋 {{ .Path }}
-    trailing_diamond: ' '
+    trailing_diamond: ''
     type: path
 
   # GIT STATUS 
@@ -73,7 +73,7 @@ blocks:
       fetch_status: true
     style: diamond
     template: "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}"
-    trailing_diamond: ' '
+    trailing_diamond: ''
     type: git
 
   # WORKING GIT
@@ -86,7 +86,7 @@ blocks:
       fetch_status: true
     style: diamond
     template: "{{ if .Working.Changed }} work{{if gt .Working.Added 0}}  {{.Working.Added}}{{end}}{{if gt .Working.Modified 0}} 󰸥 {{.Working.Modified}}{{end}}{{if gt .Working.Deleted 0}}  {{.Working.Deleted}}{{end}}{{if gt .Working.Untracked 0}}  {{.Working.Untracked}}{{end}}{{ end }}"
-    trailing_diamond: ' '
+    trailing_diamond: ''
     type: git
 
   # STAGING GIT
@@ -99,7 +99,7 @@ blocks:
       fetch_status: true
     style: diamond
     template: "{{ if .Staging.Changed }} stage{{if gt .Staging.Added 0}}  {{.Staging.Added}}{{end}}{{if gt .Staging.Modified 0}} 󰸥 {{.Staging.Modified}}{{end}}{{if gt .Staging.Deleted 0}}  {{.Staging.Deleted}}{{end}}{{ end }}"
-    trailing_diamond: ' '
+    trailing_diamond: ''
     type: git
 
   type: prompt
@@ -118,7 +118,7 @@ blocks:
   #   leading_diamond: ''
   #   style: diamond
   #   template: " {{ .MajorMinorPatch }}"
-  #   trailing_diamond: ' ' 
+  #   trailing_diamond: '' 
   #   type: gitversion
 
   # Cmake
@@ -128,7 +128,7 @@ blocks:
     leading_diamond: ''
     style: diamond
     template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_FLUTTER)) }} 󰙲 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-    trailing_diamond: ' ' 
+    trailing_diamond: '' 
     type: cmake
 
 
@@ -139,7 +139,7 @@ blocks:
     leading_diamond: ''
     style: diamond
     template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_FLUTTER)) }} {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-    trailing_diamond: ' ' 
+    trailing_diamond: '' 
     type: dart
 
 
@@ -150,7 +150,7 @@ blocks:
     leading_diamond: ''
     style: diamond
     template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_LUA)) }} {{ if or (.Error) (empty .Full) }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-    trailing_diamond: ' ' 
+    trailing_diamond: '' 
     type: lua
   
   # NODE
@@ -160,7 +160,7 @@ blocks:
     leading_diamond: ''
     style: diamond
     template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_NODE)) }}󰎙 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-    trailing_diamond: ' ' 
+    trailing_diamond: '' 
     type: node
 
   # RUST
@@ -170,7 +170,7 @@ blocks:
     leading_diamond: ''
     style: diamond
     template: "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_RUST)) }} {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}{{ end }}"
-    trailing_diamond: ' ' 
+    trailing_diamond: '' 
     type: rust
 
   # PYTHON
@@ -182,7 +182,7 @@ blocks:
       display_mode: context
     style: diamond
     template: "{{ if or (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON))) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }} {{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON)) }}{{ .Full }}{{ end }}{{ if and (.Venv) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON))) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }} \ue621 {{ end }}{{ if and (.Venv) (eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PROJECT_PYTHON_VENV))) }}{{ if .Env.SEGMENT_PROJECT_PYTHON_ACTIVE_VENV_STR }}{{ .Env.SEGMENT_PROJECT_PYTHON_ACTIVE_VENV_STR }}{{ else }}{{ .Venv }}{{ end }}{{ end }}{{ end }}"
-    trailing_diamond: ' ' 
+    trailing_diamond: '' 
     type: python
 
 
@@ -201,7 +201,7 @@ blocks:
       threshold: 1.0
     style: diamond
     template: "󱎫 {{ .FormattedMs }}"
-    trailing_diamond: ' ' 
+    trailing_diamond: '' 
     type: executiontime
 
   # TIME
@@ -237,7 +237,7 @@ blocks:
     leading_diamond: ''
     style: diamond
     template: "{{ if eq \"True\" (title (default \"False\" .Env.DISABLE_SEGMENT_BATTERY)) }}{{ else }}{{ if not .Error }}{{ if eq \"Charging\" .State.String }}\ue315 {{ else if eq \"Discharging\" .State.String }}\uf062 {{ else if eq \"Full\" .State.String }}~ {{ else }}? {{ end }}{{ if le .Percentage 15 }}\uf579{{ else if and (ge .Percentage 16) (le .Percentage 30) }}\uf57a{{ else if and (ge .Percentage 31) (le .Percentage 45) }}\uf57c{{ else if and (ge .Percentage 46) (le .Percentage 55)}}\uf57d{{ else if and (ge .Percentage 56) (le .Percentage 70) }}\uf57e{{ else if and (ge .Percentage 71) (le .Percentage 80) }}\uf580{{ else if and (ge .Percentage 81) (le .Percentage 95) }}\uf581{{ else }}\uf578{{ end }} {{ .Percentage }}%{{ else }}!{{ end }}{{ end }}"
-    trailing_diamond: ' '
+    trailing_diamond: ''
     type: battery
 
   type: prompt
@@ -257,7 +257,7 @@ blocks:
   #   leading_diamond: ''
   #   style: diamond
   #   template: "{{ if or (.Segments.Session.SSHSession) (.Root) }}{{ if .Segments.Session.SSHSession }}\ue7a2 SSH{{ end }}{{ if and (.Segments.Session.SSHSession) (.Root) }} \ue621 {{ end }}{{ if .Root }}# Root{{ end }}{{ end }}"
-  #   trailing_diamond: ' ' 
+  #   trailing_diamond: '' 
   #   type: text
 
   # last prompt 
@@ -328,5 +328,5 @@ palette:
 # transient_prompt:
 #   template: |-
     
-#     {{ if eq "False" (title (default "False" .Env.DISABLE_SEGMENT_TRANSIENT)) }}<{{ if eq .Code 0 }}p:c-badge-return-success{{ else if or (eq .Code 1) (eq .Code 130) }}p:c-badge-return-fail-term{{ else }}p:c-badge-return-custom{{ end }}>''</><p:c-badge-text,{{ if eq .Code 0 }}p:c-badge-return-success{{ else if or (eq .Code 1) (eq .Code 130) }}p:c-badge-return-fail-term{{ else }}p:c-badge-return-custom{{ end }}>DONE {{ if .Segments.Executiontime.Ms }}{{ if eq "False" (title (default "False" .Env.DISABLE_SEGMENT_TRANSIENT_EXEC_TIME)) }}\ufa1e {{ .Segments.Executiontime.FormattedMs }} \ue621 {{ end }}{{ end }}<b>{{ if eq .Code 0 }}OK{{ else if eq .Code 1 }}FAIL{{ else if eq .Code 130 }}TERM{{ else }}Code{{ end }} ({{ .Code }})</b></><{{ if eq .Code 0 }}p:c-badge-return-success{{ else if or (eq .Code 1) (eq .Code 130) }}p:c-badge-return-fail-term{{ else }}p:c-badge-return-custom{{ end }}>' '</> {{ end }}❯ 
+#     {{ if eq "False" (title (default "False" .Env.DISABLE_SEGMENT_TRANSIENT)) }}<{{ if eq .Code 0 }}p:c-badge-return-success{{ else if or (eq .Code 1) (eq .Code 130) }}p:c-badge-return-fail-term{{ else }}p:c-badge-return-custom{{ end }}>''</><p:c-badge-text,{{ if eq .Code 0 }}p:c-badge-return-success{{ else if or (eq .Code 1) (eq .Code 130) }}p:c-badge-return-fail-term{{ else }}p:c-badge-return-custom{{ end }}>DONE {{ if .Segments.Executiontime.Ms }}{{ if eq "False" (title (default "False" .Env.DISABLE_SEGMENT_TRANSIENT_EXEC_TIME)) }}\ufa1e {{ .Segments.Executiontime.FormattedMs }} \ue621 {{ end }}{{ end }}<b>{{ if eq .Code 0 }}OK{{ else if eq .Code 1 }}FAIL{{ else if eq .Code 130 }}TERM{{ else }}Code{{ end }} ({{ .Code }})</b></><{{ if eq .Code 0 }}p:c-badge-return-success{{ else if or (eq .Code 1) (eq .Code 130) }}p:c-badge-return-fail-term{{ else }}p:c-badge-return-custom{{ end }}>''</> {{ end }}❯ 
 version: 2.0
