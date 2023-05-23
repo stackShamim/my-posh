@@ -1,0 +1,21 @@
+{
+    "title": "EscapeCaps",
+    "rules": [
+        {
+            "description": "CapsLock to ESC",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "escape"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
