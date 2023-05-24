@@ -62,6 +62,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+
+
+
+
 plugins=(git z brew zsh-autosuggestions zsh-syntax-highlighting history web-search dirhistory copybuffer sudo macos)
 
 # git - use git
@@ -166,4 +171,4 @@ alias tree='exa --tree --icons --group-directories-first'
 # Some alias
 alias cl='clear'
 alias cls='clear'
-# alias z='cd'
+# alias z='
