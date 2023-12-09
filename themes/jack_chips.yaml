@@ -29,7 +29,7 @@ blocks:
   newline: true
   segments:
   - style: diamond
-    template: "‎"
+    template: "‎   "
     type: text
   type: prompt
 
