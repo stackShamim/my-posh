@@ -25,13 +25,13 @@ $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 blocks:
 
 # First blank line
-- alignment: left
-  newline: true
-  segments:
-  - style: diamond
-    template: "‎   "
-    type: text
-  type: prompt
+# - alignment: left
+#   newline: true
+#   segments:
+#   - style: diamond
+#     template: "‎   "
+#     type: text
+#   type: prompt
 
 # Second line
 - alignment: left
