@@ -240,9 +240,9 @@ blocks:
   type: prompt
 
   # NEXT LINE  
-  # - alignment: left
-  #   newline: true
-  #   segments:
+  - alignment: left
+    newline: true
+    segments:
   # - style: diamond
   #   template: "{{ if false }}{{ end }}"
   #   type: session
