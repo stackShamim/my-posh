@@ -25,13 +25,13 @@ $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 blocks:
 
 # First blank line
-# - alignment: left
-#   newline: true
-#   segments:
-#   - style: diamond
-#     template: "‎   "
-#     type: text
-#   type: prompt
+- alignment: left
+  newline: true
+  segments:
+  - style: diamond
+    template: "‎"
+    type: text
+  type: prompt
 
 # Second line
 - alignment: left
@@ -239,23 +239,23 @@ blocks:
 
   type: prompt
 
-  # NEXT LINE  
-  - alignment: left
-    newline: true
-    segments:
-   - style: diamond
-    template: "{{ if false }}{{ end }}"
-    type: session
-    background_templates:
-    - "{{ if and (.Segments.Session.SSHSession) (not .Root) }}p:c-shell-state-ssh-active{{ end }}"
-    - "{{ if and (not .Segments.Session.SSHSession) (.Root) }}p:c-shell-state-root-active{{ end }}"
-    - "{{ if and (.Segments.Session.SSHSession) (.Root) }}p:c-shell-state-root-ssh-active{{ end }}"
-    foreground: p:c-badge-text
-    leading_diamond: ''
-    style: diamond
-    template: "{{ if or (.Segments.Session.SSHSession) (.Root) }}{{ if .Segments.Session.SSHSession }}\ue7a2 SSH{{ end }}{{ if and (.Segments.Session.SSHSession) (.Root) }} \ue621 {{ end }}{{ if .Root }}# Root{{ end }}{{ end }}"
-    trailing_diamond: ' ' 
-    type: text
+# NEXT LINE
+- alignment: left
+  newline: true
+  segments:
+  # - style: diamond
+  #   template: "{{ if false }}{{ end }}"
+  #   type: session
+  # - background_templates:
+  #   - "{{ if and (.Segments.Session.SSHSession) (not .Root) }}p:c-shell-state-ssh-active{{ end }}"
+  #   - "{{ if and (not .Segments.Session.SSHSession) (.Root) }}p:c-shell-state-root-active{{ end }}"
+  #   - "{{ if and (.Segments.Session.SSHSession) (.Root) }}p:c-shell-state-root-ssh-active{{ end }}"
+  #   foreground: p:c-badge-text
+  #   leading_diamond: ''
+  #   style: diamond
+  #   template: "{{ if or (.Segments.Session.SSHSession) (.Root) }}{{ if .Segments.Session.SSHSession }}\ue7a2 SSH{{ end }}{{ if and (.Segments.Session.SSHSession) (.Root) }} \ue621 {{ end }}{{ if .Root }}# Root{{ end }}{{ end }}"
+  #   trailing_diamond: ' ' 
+  #   type: text
 
   # last prompt 
   - foreground_templates:
