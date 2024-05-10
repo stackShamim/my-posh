@@ -21,18 +21,18 @@
 
 $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 blocks:
-  # First blank line
-  - alignment: left
-    newline: true
-    segments:
-      - style: diamond
-        template: "‎"
-        type: text
-    type: prompt
+  # # First blank line
+  # - alignment: left
+  #   newline: true
+  #   segments:
+  #     - style: diamond
+  #       template: "‎"
+  #       type: text
+  #   type: prompt
 
   # Second line
   - alignment: left
-    newline: true
+    # newline: true
     segments:
       # FOLDER PATH
       - background_templates:
