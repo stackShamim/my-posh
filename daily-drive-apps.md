@@ -178,26 +178,22 @@ Topgrade is a command-line tool that simplifies system maintenance by updating m
 
 **Install:**
 
-````
+```
 brew install topgrade
-```\*\*\*\*
+```
 
 ### Calendr
 
 Calendr is a minimalist menu bar calendar for macOS that displays your events and reminders in a clean, distraction-free interface.
 
-**Install:**
-````
-
-https://github.com/pakerwreah/Calendr/releases
-
-```
+**Download:** [https://github.com/pakerwreah/Calendr/releases](https://github.com/pakerwreah/Calendr/releases)
 
 ### Itsycal
 
 Itsycal is a compact, keyboard-friendly calendar that resides in your Mac's menu bar, seamlessly integrating with the macOS Calendar app to display events and allow quick event creation.
 
 **Install:**
+
 ```
 
 brew install --cask itsycal
@@ -209,6 +205,7 @@ brew install --cask itsycal
 yt-dlp is a command-line program that allows downloading videos and audio from YouTube and many other streaming platforms, featuring improved performance and additional features compared to youtube-dl.
 
 **Install:**
+
 ```
 
 brew install yt-dlp
@@ -236,6 +233,7 @@ brew install --cask flutter
 CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects, facilitating the integration of third-party libraries into Xcode projects through a standardized format.
 
 **Install:**
+
 ```
 
 brew install cocoapods
@@ -247,6 +245,7 @@ brew install cocoapods
 ca-certificates is a package that provides a set of trusted Certificate Authority (CA) certificates for verifying SSL/TLS connections on your system.
 
 **Install:**
+
 ```
 
 brew install ca-certificates
@@ -270,6 +269,7 @@ brew install node
 nvm (Node Version Manager) is a command-line tool that allows you to manage multiple Node.js versions on a single machine, enabling easy installation, switching, and version control.
 
 **Install:**
+
 ```
 
 brew install nvm
@@ -317,6 +317,7 @@ brew install --cask android-platform-tools
 Python 3.13 is the latest stable release of the Python programming language, featuring enhanced performance, improved error messages, and expanded typing capabilities.
 
 **Install:**
+
 ```
 
 brew install python@3.13
@@ -376,6 +377,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 z is a command-line tool that tracks your most used directories and allows quick navigation by typing partial directory names.
 
 **Install:**
+
 ```
 
 brew install z
@@ -387,6 +389,7 @@ brew install z
 zsh-syntax-highlighting is a Zsh plugin that provides syntax highlighting for the command line, making it easier to spot errors and understand commands as you type.
 
 **Install:**
+
 ```
 
 brew install zsh-syntax-highlighting
@@ -398,6 +401,7 @@ brew install zsh-syntax-highlighting
 zsh-autosuggestions is a Zsh plugin that suggests commands as you type based on your command history, improving efficiency and reducing typing effort.
 
 **Install:**
+
 ```
 
 brew install zsh-autosuggestions
@@ -409,6 +413,7 @@ brew install zsh-autosuggestions
 FiraCode Nerd Font is a monospaced font designed for developers, featuring programming ligatures and a comprehensive set of glyphs, enhancing readability and aesthetics in code editors and terminals.
 
 **Install:**
+
 ```
 
 brew install --cask font-fira-code-nerd-font
@@ -520,6 +525,7 @@ brew install --cask trae
 Windsurf is an AI-powered integrated development environment (IDE) that enhances developer productivity by integrating advanced artificial intelligence features directly into the coding environment.
 
 **Install:**
+
 ```
 
 brew install --cask windsurf
@@ -607,6 +613,7 @@ brew install --cask microsoft-teams
 Signal is a free, open-source messaging app that offers end-to-end encrypted text, voice, and video communications across mobile and desktop platforms, prioritizing user privacy and security.
 
 **Install:**
+
 ```
 
 brew install --cask signal
@@ -708,6 +715,5 @@ $$
 ## Important: Do not include any content references, citations, or source attributions in the output. Only provide the formatted markdown snippet.
 
 ## Important: Make sure the entire output is wrapped in a code block so I can copy it directly.
----
 
-```
+---
