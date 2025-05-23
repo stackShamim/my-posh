@@ -3,6 +3,77 @@
 A curated list of essential macOS applications and tools, organized by category. Each entry includes a brief description and Homebrew install command or download link.
 
 ---
+- [📦 macOS Daily Drive Apps](#-macos-daily-drive-apps)
+  - [🛠️ Core Tools](#️-core-tools)
+    - [Homebrew](#homebrew)
+    - [Raycast](#raycast)
+  - [⚙️ Utilities](#️-utilities)
+    - [AltTab](#alttab)
+    - [Stats](#stats)
+    - [AppCleaner](#appcleaner)
+    - [Hidden Bar](#hidden-bar)
+    - [Keka](#keka)
+    - [IINA](#iina)
+    - [Later](#later)
+    - [Neo Htop](#neo-htop)
+    - [Logitech G HUB](#logitech-g-hub)
+    - [Numi](#numi)
+    - [Fliqlo](#fliqlo)
+    - [Android Toolbox](#android-toolbox)
+    - [LocalSend](#localsend)
+    - [Google Drive](#google-drive)
+    - [KeyCastr](#keycastr)
+    - [Topgrade](#topgrade)
+    - [Calendr](#calendr)
+    - [Itsycal](#itsycal)
+    - [yt-dlp](#yt-dlp)
+  - [👨‍💻 Developer Tools](#-developer-tools)
+    - [Flutter SDK](#flutter-sdk)
+    - [CocoaPods](#cocoapods)
+    - [ca-certificates](#ca-certificates)
+    - [Node.js](#nodejs)
+    - [nvm](#nvm)
+    - [pnpm](#pnpm)
+    - [Yarn](#yarn)
+    - [Android Platform Tools (ADB)](#android-platform-tools-adb)
+    - [Python 3.13](#python-313)
+    - [Hyper](#hyper)
+    - [Warp](#warp)
+    - [Oh My Posh](#oh-my-posh)
+    - [Oh My Zsh](#oh-my-zsh)
+    - [z](#z)
+    - [zsh-syntax-highlighting](#zsh-syntax-highlighting)
+    - [zsh-autosuggestions](#zsh-autosuggestions)
+    - [FiraCode Nerd Font](#firacode-nerd-font)
+    - [MongoDB Compass](#mongodb-compass)
+    - [Postman](#postman)
+    - [Bat](#bat)
+    - [UnXip](#unxip)
+    - [Eza](#eza)
+  - [🧠 IDEs \& Code Editors](#-ides--code-editors)
+    - [Visual Studio Code](#visual-studio-code)
+    - [Cursor](#cursor)
+    - [Trae](#trae)
+    - [Windsurf](#windsurf)
+    - [Zed](#zed)
+  - [📱 Social Media \& Communication](#-social-media--communication)
+    - [Discord](#discord)
+    - [WhatsApp](#whatsapp)
+    - [Messenger](#messenger)
+    - [Telegram](#telegram)
+    - [Microsoft Teams](#microsoft-teams)
+    - [Signal](#signal)
+  - [🌐 Browsers \& Networking](#-browsers--networking)
+    - [Google Chrome](#google-chrome)
+    - [Arc Browser](#arc-browser)
+    - [Zen Browser](#zen-browser)
+    - [Cloudflare Warp](#cloudflare-warp)
+    - [Folx](#folx)
+- [LLM Command to Generate Software Items](#llm-command-to-generate-software-items)
+  - [PROMPT](#prompt)
+  - [Important: Do not include any content references, citations, or source attributions in the output. Only provide the formatted markdown snippet.](#important-do-not-include-any-content-references-citations-or-source-attributions-in-the-output-only-provide-the-formatted-markdown-snippet)
+  - [Important: Make sure the entire output is wrapped in a code block so I can copy it directly.](#important-make-sure-the-entire-output-is-wrapped-in-a-code-block-so-i-can-copy-it-directly)
+
 
 ## 🛠️ Core Tools
 
@@ -706,9 +777,9 @@ You will be given only an installation command or download link for a macOS soft
 
 **Install:**
 
-$$
+$$$
 [installation command or download link]
-$$
+$$$
 
 ```
 
